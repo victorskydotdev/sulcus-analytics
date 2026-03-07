@@ -1,0 +1,128 @@
+.about {
+	background: var(--cream);
+	border-top: 1px solid var(--border);
+	border-bottom: 1px solid var(--border);
+}
+
+.about-inner {
+	display: grid;
+	grid-template-columns: 1fr 1.4fr;
+	gap: 6rem;
+	align-items: center;
+}
+
+.about-left {
+}
+
+.about-body {
+	font-size: 1.05rem;
+	line-height: 1.8;
+	color: var(--muted);
+	margin-top: 1.5rem;
+}
+
+.about-body p + p {
+	margin-top: 1rem;
+}
+
+.pillars {
+	margin-top: 2.5rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+}
+
+.pillar {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.75rem;
+}
+
+.pillar-icon {
+	width: 32px;
+	height: 32px;
+	border: 1px solid var(--teal);
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--teal);
+	flex-shrink: 0;
+	font-size: 0.85rem;
+}
+
+.pillar-text {
+	font-size: 0.82rem;
+	font-weight: 600;
+	color: var(--ink);
+	line-height: 1.4;
+}
+
+.about-right {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.25rem;
+}
+
+.about-stat-card {
+	background: white;
+	border: 1px solid var(--border);
+	border-radius: 4px;
+	padding: 1.75rem 1.5rem;
+	position: relative;
+	overflow: hidden;
+}
+
+.about-stat-card::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(90deg, var(--teal), var(--gold));
+}
+
+.about-stat-card.featured {
+	background: var(--ink);
+	color: var(--paper);
+	grid-row: span 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.about-stat-card.featured::after {
+	background: linear-gradient(90deg, var(--gold), var(--gold-light));
+}
+
+.stat-big {
+	font-family: 'DM Serif Display', serif;
+	font-size: 3.5rem;
+	line-height: 1;
+	color: var(--ink);
+}
+
+.about-stat-card.featured .stat-big {
+	color: var(--paper);
+}
+
+.stat-desc {
+	font-size: 0.8rem;
+	color: var(--muted);
+	margin-top: 0.5rem;
+	line-height: 1.4;
+}
+
+.about-stat-card.featured .stat-desc {
+	color: rgba(245, 242, 235, 0.6);
+}
+
+.featured-quote {
+	font-family: 'DM Serif Display', serif;
+	font-size: 1.2rem;
+	font-style: italic;
+	line-height: 1.5;
+	color: var(--gold-light);
+	margin-top: 1rem;
+}

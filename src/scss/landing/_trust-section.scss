@@ -1,0 +1,44 @@
+.trust-bar {
+	background: var(--ink);
+	color: var(--paper);
+	padding: 1.25rem 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+	overflow: hidden;
+}
+
+.trust-label {
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 0.65rem;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: rgba(245, 242, 235, 0.4);
+	white-space: nowrap;
+}
+
+.trust-tools {
+	display: flex;
+	align-items: center;
+	gap: 2.5rem;
+	flex-wrap: wrap;
+}
+
+.tool-tag {
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 0.75rem;
+	color: rgba(245, 242, 235, 0.65);
+	letter-spacing: 0.05em;
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+.tool-tag::before {
+	content: '';
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: var(--gold);
+}
