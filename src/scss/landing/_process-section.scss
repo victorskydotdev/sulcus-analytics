@@ -109,3 +109,16 @@
 	line-height: 1.65;
 	color: rgba(245, 242, 235, 0.5);
 }
+
+@media screen and (max-width: 900px) {
+	.process-header {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+	.steps {
+		grid-template-columns: 1fr 1fr;
+	}
+	.step::after {
+		display: none;
+	}
+}

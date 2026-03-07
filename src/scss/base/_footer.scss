@@ -45,3 +45,11 @@ footer {
 .footer-links a:hover {
 	color: var(--paper);
 }
+
+@media screen and (max-width: 900px) {
+	footer {
+		flex-direction: column;
+		text-align: center;
+		padding: 2.5rem 1.5rem;
+	}
+}

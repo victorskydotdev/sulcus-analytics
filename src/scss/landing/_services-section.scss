@@ -134,3 +134,12 @@
 	border-color: var(--teal);
 	color: white;
 }
+
+@media screen and (max-width: 900px) {
+	.services-grid {
+		grid-template-columns: 1fr;
+	}
+	.service-card.large {
+		grid-column: span 1;
+	}
+}

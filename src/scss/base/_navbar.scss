@@ -70,3 +70,12 @@ nav {
 	background: var(--teal) !important;
 	color: var(--paper) !important;
 }
+
+@media screen and (max-width: 900px) {
+	nav {
+		padding: 1rem 1.5rem;
+	}
+	.nav-links {
+		display: none;
+	}
+}
