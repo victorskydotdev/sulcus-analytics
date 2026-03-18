@@ -11,22 +11,6 @@
 		<!-- header section -->
 		<nav>
 			<a href="#" class="nav-logo">
-				<!-- <svg class="logo-mark" viewBox="0 0 36 36" fill="none">
-					<rect
-						x="4"
-						y="4"
-						width="28"
-						height="28"
-						rx="3"
-						stroke="#1a6b6b"
-						stroke-width="1.5" />
-					<path
-						d="M10 26 L10 18 L18 14 L26 18 L26 26"
-						stroke="#c9a84c"
-						stroke-width="1.5"
-						stroke-linejoin="round" />
-					<circle cx="18" cy="13" r="2.5" fill="#1a6b6b" />
-				</svg> -->
 				<span class="logo-text">Sulcus <span>Analytics</span></span>
 				<!-- <img src="./" alt=""> -->
 			</a>
@@ -440,7 +424,7 @@
 					hours to discuss your project.
 				</p>
 
-				<div id="modalForm">
+				<form id="modalForm">
 					<div class="form-row">
 						<div class="form-group">
 							<label class="form-label">First Name</label>
@@ -448,36 +432,47 @@
 								class="form-input"
 								type="text"
 								placeholder="John"
-								id="firstName" />
+								id="firstName"
+								name="first_name" />
 						</div>
+
 						<div class="form-group">
 							<label class="form-label">Last Name</label>
 							<input
 								class="form-input"
 								type="text"
 								placeholder="Doe"
-								id="lastName" />
+								id="lastName"
+								name="last_name" />
 						</div>
 					</div>
+
 					<div class="form-group">
 						<label class="form-label">Email Address</label>
 						<input
 							class="form-input"
 							type="email"
 							placeholder="john@company.com"
-							id="emailInput" />
+							id="emailInput"
+							name="email_address" />
 					</div>
+
 					<div class="form-group">
 						<label class="form-label">Organisation / Institution</label>
 						<input
 							class="form-input"
 							type="text"
 							placeholder="Your company or institution"
-							id="orgInput" />
+							id="orgInput"
+							name="business_name" />
 					</div>
+
 					<div class="form-group">
 						<label class="form-label">Service of Interest</label>
-						<select class="form-select" id="serviceSelect">
+						<select
+							class="form-select"
+							id="serviceSelect"
+							name="service_interest">
 							<option value="">Select a service...</option>
 							<option>Data Analysis & Visualization</option>
 							<option>Machine Learning Model Development</option>
@@ -488,13 +483,16 @@
 							<option>Multiple / Not Sure</option>
 						</select>
 					</div>
+
 					<div class="form-group">
 						<label class="form-label">Tell Us About Your Project</label>
 						<textarea
 							class="form-textarea"
 							placeholder="Briefly describe your data, goals, and what you're hoping to achieve..."
-							id="projectDesc"></textarea>
+							id="projectDesc"
+							name="project_description"></textarea>
 					</div>
+
 					<button class="btn-primary form-submit">
 						Submit Request
 						<svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -506,7 +504,7 @@
 								stroke-linejoin="round" />
 						</svg>
 					</button>
-				</div>
+				</form>
 
 				<div
 					id="successMsg"
