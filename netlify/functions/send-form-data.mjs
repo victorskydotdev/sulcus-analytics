@@ -9,8 +9,6 @@ const email = Netlify.env.get('EMAIL');
 export default async (req, context) => {
 	const data = await req.json();
 
-	// console.log(data);
-	// console.log('Context:', context);
 	const {
 		first_name,
 		last_name,
@@ -26,36 +24,42 @@ export default async (req, context) => {
 	});
 
 	try {
-		console.log('hello world from inside Try...Catch');
-
-		console.log('Domain:', domain);
-		console.log('Domain:', domain);
-
 		const response = await mg.messages.create(domain, {
-			from: `Sulcus Analytics <info@${domain}>`,
-			to: [email],
-			subject: 'testing the email',
+			from: `Sulcus Analytics <no-reply@sulcusanalytics.com>`,
+			to: ['sulcusanalytics@gmail.com'],
+			replyTo: email,
+			subject: 'Customer Service Inquiry Submission',
 			text: '',
 			html: `
-				hello world!
+				<h3>Hello Sulcus</h3>,
 
-				${first_name} ${last_name},
-				${service_interest}
+				<br>
+				
+				<p style="text-decoration: underline;">1 client/visitor inquiry, details below</p>
 
-				Privacy consent: ${business_name}
+				<br>
+
+				Customer name: ${(first_name, last_name)}, <br>
+				Email Address: ${email_address}, <br>
+				Business name: ${business_name}, <br>
+				Service interest: ${service_interest}, <br>
+				Project description: ${project_description}
 			`,
 		});
 
-		if (response.ok) {
+		if (response.status !== 200) {
 			console.log(response);
-		} else console.log('Something went wrong');
+		} else console.log('Message sent!');
 
-		return new Response(JSON.stringify({ message: 'success' }), {
-			status: 200,
-			headers: {
-				'Content-Type': 'application/json',
+		return new Response(
+			JSON.stringify({ message: 'success', response: response }),
+			{
+				status: 200,
+				headers: {
+					'Content-Type': 'application/json',
+				},
 			},
-		});
+		);
 	} catch (error) {
 		console.log('Internal Server Error Message:', error);
 

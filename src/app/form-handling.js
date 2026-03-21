@@ -52,21 +52,18 @@ export const submitForm = () => {
 			});
 
 			if (!res.ok) {
-				console.log(
-					'Response is not OK. See response Object:',
-					await res.json(),
-				);
+				alert('Network error! Please refresh and try again...');
 			} else {
 				form.style.display = 'none';
 				document.getElementById('successMsg').style.display = 'block';
 
 				const data = await res.json();
-				console.log(data);
+				// console.log(data);
 			}
 		} catch (error) {
 			console.error(error);
 		}
 
-		console.log(jsonData);
+		// console.log(jsonData);
 	});
 };

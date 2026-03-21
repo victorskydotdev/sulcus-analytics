@@ -39,24 +39,24 @@ module.exports = {
 				use: ['html-loader'],
 			},
 
-			{
-				test: /\.(svg|png|jpe?g|gif)$/,
-				use: {
-					loader: 'file-loader',
-					options: {
-						name: '[name].[hash].[ext]',
-						outputPath: 'imgs',
-					},
-				},
-			},
-
 			// {
-			// 	test: /\.(svg | png | jpe?g | gif$)/,
-			// 	type: 'asset/resource',
-			// 	generator: {
-			// 		filename: 'assets/[hash][ext]',
+			// 	test: /\.(svg|png|jpe?g|gif)$/,
+			// 	use: {
+			// 		loader: 'file-loader',
+			// 		options: {
+			// 			name: '[name].[hash].[ext]',
+			// 			outputPath: 'imgs',
+			// 		},
 			// 	},
 			// },
+
+			{
+				test: /\.(svg | png | jpe?g | gif$)/,
+				type: 'asset/resource',
+				generator: {
+					filename: 'assets/[hash][ext]',
+				},
+			},
 		],
 	},
 };
