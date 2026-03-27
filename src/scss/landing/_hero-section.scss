@@ -153,26 +153,16 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
 
-.data-card {
-	background: white;
-	border: 1px solid var(--border);
-	border-radius: 6px;
-	padding: 1.5rem;
-	box-shadow: 0 20px 60px rgba(10, 10, 15, 0.1);
-	width: 100%;
-	max-width: 420px;
-	animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-	0%,
-	100% {
-		transform: translateY(0px);
+	img {
+		width: 500px;
+		border-radius: 10px;
 	}
-	50% {
-		transform: translateY(-12px);
+
+	@media screen and (max-width: 62em) {
+		img {
+			display: none;
+		}
 	}
 }
 
