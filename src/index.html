@@ -3,25 +3,42 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<script
+			src="https://kit.fontawesome.com/8464da9b67.js"
+			crossorigin="anonymous"></script>
+
+		<!-- title -->
 		<title>Sulcus Analytics — Data Intelligence Platform</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="stylesheet" />
 	</head>
-	<body>
+	<body class="body">
 		<!-- header section -->
-		<nav>
-			<a href="#" class="nav-logo">
-				<!-- <span class="logo-text">Sulcus <span>Analytics</span></span> -->
-				<img class="logo" src="./assets/sulcus-web-logo.png" alt="" />
-			</a>
-			<ul class="nav-links">
-				<li><a href="#about">About</a></li>
-				<li><a href="#services">Services</a></li>
-				<li><a href="#process">Process</a></li>
-				<li>
-					<a href="#" class="nav-cta modal-btn">Get Service</a>
-				</li>
-			</ul>
+		<nav class="header-nav">
+			<div class="nav-wrap">
+				<a href="#" class="nav-logo">
+					<!-- <span class="logo-text">Sulcus <span>Analytics</span></span> -->
+					<img class="logo" src="./assets/sulcus-web-logo.png" alt="" />
+				</a>
+
+				<ul class="nav-links">
+					<li class="link"><a href="#about">About</a></li>
+					<li class="link"><a href="#services">Services</a></li>
+					<li class="link"><a href="#process">Process</a></li>
+					<li class="link"><a href="/visual-lab">Visual lab</a></li>
+					<li class="link">
+						<a href="#" class="nav-cta modal-btn">Get Service</a>
+					</li>
+				</ul>
+
+				<div class="burger-wrap">
+					<button class="menu-burger">
+						<i class="fa-solid fa-bars"></i>
+						<i class="fa-solid fa-xmark"></i>
+					</button>
+				</div>
+			</div>
 		</nav>
 
 		<!-- hero section -->
@@ -57,7 +74,7 @@
 			</div>
 
 			<div class="hero-visual">
-				<div class="badge-float top-left">
+				<!-- <div class="badge-float top-left">
 					<div class="badge-icon" style="background: #f0fafa">📊</div>
 					<span>Advanced Analytics</span>
 				</div>
@@ -65,13 +82,13 @@
 				<div class="data-card">
 					<div class="data-card-header">
 						<span class="data-card-title">Performance Dashboard</span>
-						<!-- <div class="live-badge">
+						<div class="live-badge">
 							<div class="live-dot"></div>
 							LIVE
-						</div> -->
+						</div>
 					</div>
 					<div class="chart-bars" id="chartBars">
-						<!-- bars injected by JS -->
+						
 					</div>
 					<div class="chart-stats">
 						<div class="stat-item">
@@ -92,7 +109,7 @@
 				<div class="badge-float bottom-right">
 					<div class="badge-icon" style="background: #fdfaf0">🔒</div>
 					<span>Ethical Data Practice</span>
-				</div>
+				</div> -->
 			</div>
 		</section>
 		<!-- end of hero section -->

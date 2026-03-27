@@ -21,6 +21,14 @@ module.exports = {
 			inject: 'head',
 			// favicon: 'src/assets/favicon.png',
 		}),
+
+		new HtmlWebpackPlugin({
+			template: './src/visual-lab.html',
+			chunks: ['main'],
+			filename: 'visual-lab.html',
+			inject: 'head',
+			// favicon: 'src/assets/favicon.png',
+		}),
 	],
 
 	module: {

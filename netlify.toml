@@ -1,5 +1,12 @@
+[dev]
+
 [build]
 
 command = "npm run build"
 function = "netlify/functions"
 publish = "dist"
+
+[[ edge-functions ]]
+function= "redirect"
+path= "/redirect"
+
