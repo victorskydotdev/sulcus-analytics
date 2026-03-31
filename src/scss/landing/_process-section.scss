@@ -1,5 +1,8 @@
+@use '../base/resets' as *;
+
 .process {
-	background: var(--ink);
+	// background: var(--ink);
+	background: $navy-blue-dark;
 	color: var(--paper);
 	position: relative;
 	overflow: hidden;

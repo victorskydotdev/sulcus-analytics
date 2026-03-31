@@ -1,5 +1,7 @@
+@use '../base/resets' as *;
+
 footer {
-	background: var(--ink);
+	background: $navy-blue-dark;
 	color: var(--paper);
 	padding: 3rem 4rem;
 	display: flex;
