@@ -146,8 +146,8 @@
 	color: var(--paper);
 }
 
-/* ── HERO VISUAL ── */
-.hero-visual {
+/* ── HERO VIRTUAL ── */
+.hero-virtual {
 	position: relative;
 	z-index: 2;
 	display: flex;
@@ -301,7 +301,7 @@
 		grid-template-columns: 1fr;
 		padding: 7rem 1.5rem 3rem;
 	}
-	.hero-visual {
+	.hero-virtual {
 		display: none;
 	}
 }

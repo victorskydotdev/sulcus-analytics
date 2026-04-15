@@ -7,7 +7,7 @@ const displayAlert = () => {
 	const messageTemplate = () => {
 		return `
       <div class="alert-wrap">
-        <h3 class="">Visual Lab is coming soon</h3>
+        <h3 class="">Virtual Lab is coming soon</h3>
         <a href="/" class="">Go back to home</a>
       </div>
     `;
@@ -17,8 +17,8 @@ const displayAlert = () => {
 
 	const params = new URLSearchParams(window.location.search);
 
-	if (params.get('coming-soon') === 'visual-lab') {
-		// alert('Visual Lab is coming soon!');
+	if (params.get('coming-soon') === 'virtual-lab') {
+		// alert('Virtual Lab is coming soon!');
 		const alertModalWrap = document.querySelector('.modal-wrap');
 		alertModalWrap.innerHTML = messageTemplate();
 		alertModalWrap.classList.add('open-modal');

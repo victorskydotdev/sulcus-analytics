@@ -23,9 +23,9 @@ module.exports = {
 		}),
 
 		new HtmlWebpackPlugin({
-			template: './src/visual-lab.html',
+			template: './src/virtual-lab.html',
 			chunks: ['main'],
-			filename: 'visual-lab.html',
+			filename: 'virtual-lab.html',
 			inject: 'head',
 			// favicon: 'src/assets/favicon.png',
 		}),

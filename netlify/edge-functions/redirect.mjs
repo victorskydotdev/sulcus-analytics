@@ -1,7 +1,7 @@
 export default async (request, context) => {
 	const url = new URL(request.url);
 
-	if (url.pathname === '/visual-lab') {
+	if (url.pathname === '/virtual-lab') {
 		/* return new Response(
 			`
       <!DOCTYPE html>
@@ -9,7 +9,7 @@ export default async (request, context) => {
         <head>
           <title>Redirecting...</title>
           <script>
-            // alert("Visual Lab is not available now. We'll be up and running soon! Try again later");
+            // alert("virtual Lab is not available now. We'll be up and running soon! Try again later");
 
             // Redirect after alert
             //window.location.href = "/";
@@ -28,7 +28,7 @@ export default async (request, context) => {
 		const redirectUrl = new URL(request.url);
 		redirectUrl.pathname = '/';
 
-		redirectUrl.searchParams.set('coming-soon', 'visual-lab');
+		redirectUrl.searchParams.set('coming-soon', 'virtual-lab');
 
 		return Response.redirect(redirectUrl.toString(), 302);
 	}
@@ -37,6 +37,6 @@ export default async (request, context) => {
 };
 
 export const config = {
-	path: '/visual-lab',
+	path: '/virtual-lab',
 	excludedPath: ['/*.js', '/*.css', '/*.png', '/favicon.ico'],
 };
